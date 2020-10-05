@@ -4,6 +4,7 @@
   tasks:
     - debug:
         msg: "{{ hostvars }}"
+    - shell: "tree {{ inventory_dir }}"
     - include_vars:
         file: "{{ content_file }}"
     - debug:
