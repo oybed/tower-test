@@ -1,2 +1,0 @@
-
-body: This is the content body
