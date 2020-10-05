@@ -1,0 +1,3 @@
+---
+
+content_file: "{{ inventory_dir }}/project/files/content.txt"

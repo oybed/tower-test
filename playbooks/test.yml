@@ -1,0 +1,10 @@
+---
+
+- hosts: notification_host
+  tasks:
+    - debug:
+        msg: "{{ hostvars }}"
+    - include_vars:
+        file: "{{ content_file }}"
+    - debug:
+        msg: "{{ body }}"
