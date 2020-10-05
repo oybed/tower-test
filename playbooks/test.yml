@@ -4,9 +4,10 @@
   tasks:
     - debug:
         msg: "{{ hostvars }}"
-    - shell: "find {{ inventory_dir }}"
+    - debug:
+        msg: "{{ content_file }}"
     - include_vars:
         file: "{{ item }}"
-      with_items: "{{ content_file | fileglob}}"
+      with_items: "{{ content_file | fileglob }}"
     - debug:
         msg: "{{ body }}"
