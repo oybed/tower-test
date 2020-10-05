@@ -6,6 +6,7 @@
         msg: "{{ hostvars }}"
     - shell: "find {{ inventory_dir }}"
     - include_vars:
-        file: "{{ content_file }}"
+        file: "{{ item }}"
+      with_items: "{{ content_file | fileglob}}"
     - debug:
         msg: "{{ body }}"
