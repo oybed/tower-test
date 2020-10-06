@@ -9,8 +9,10 @@
     - include_vars:
         file: "{{ item }}"
       with_items: "{{ content_file | fileglob }}"
+    - debug:
+        msg: "First {{ body }}"
 
 - hosts: notification_host
   tasks:
     - debug:
-        msg: "{{ body }}"
+        msg: "Second {{ body }}"
