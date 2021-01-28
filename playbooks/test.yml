@@ -3,16 +3,7 @@
 - hosts: notification_host
   tasks:
     - debug:
-        msg: "{{ hostvars }}"
+        msg: "{{ title }}"
     - debug:
-        msg: "{{ content_file }}"
-    - include_vars:
-        file: "{{ item }}"
-      with_items: "{{ content_file | fileglob }}"
-    - debug:
-        msg: "First {{ body }}"
+        msg: "{{ body }}"
 
-- hosts: notification_host
-  tasks:
-    - debug:
-        msg: "Second {{ body }}"
