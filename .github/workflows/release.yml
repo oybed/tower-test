@@ -25,5 +25,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         with:
-          body: ${{ steps.latest_release.outputs.body }} ${{ steps.gh_changelog.outputs.changelog }}
+          body: "${{ steps.latest_release.outputs.body }}\n\n\ ${{ steps.gh_changelog.outputs.changelog }}"
 
