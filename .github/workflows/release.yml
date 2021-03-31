@@ -16,8 +16,10 @@ jobs:
         uses: mikepenz/release-changelog-builder-action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - uses: fetch-latest-release
+      - uses: thebritican/fetch-latest-release@v1
         id: latest_release
+        with:
+          github_token: ${{ github.token }}
       - name: Update release with changelog
         uses: tubone24/update_release@v1.1.0
         env:
