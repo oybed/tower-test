@@ -13,7 +13,7 @@
         "labels": ["bug"]
       }
     ],
-    "template": "${{CHANGELOG}}\n\n<details>\n<summary>Uncategorized</summary>\n\n${{UNCATEGORIZED}}\n</details>",
-    "pr_template": "- ${{TITLE}} (#${{NUMBER}}) by ${{AUTHOR}}"
+    "template": "${{CHANGELOG}}\n\n## Uncategorized\n\n${{UNCATEGORIZED}}\n",
+    "pr_template": "- ${{TITLE}} (#${{NUMBER}}) by [${{AUTHOR}}](https://github.com/${{AUTHOR}})"
 }
 
