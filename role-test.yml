@@ -1,6 +1,6 @@
 ---
 
-- hosts: localhost
+- hosts: csr_host
   tasks:
     - include_role:
         name: "{{ item }}/certs/generate-csr"
