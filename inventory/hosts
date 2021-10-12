@@ -3,3 +3,6 @@
 localhost
 
 [new_host]
+
+[csr_host]
+localhost

@@ -3,9 +3,7 @@
 - hosts: csr_host
   tasks:
     - debug:
-        msg: "{{ ansible_roles_path }}"
-    - debug:
-        msg: "{{ lookup('fileglob', ansible_roles_path) }}"
+        msg: "{{ ansible_roles_path | fileglob }}"
     - include_role:
         name: "{{ item }}/certs/generate-csr"
       with_items: "{{ ansible_roles_path | fileglob }}" 
