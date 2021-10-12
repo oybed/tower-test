@@ -1,6 +1,8 @@
 ---
 
-- hosts: csr_host
-  roles:
-    - role: "{{ ansible_roles_path }}/certs/generate-csr"
+- hosts: localhost
+  tasks:
+    - include_role:
+        name: "{{ item }}/certs/generate-csr"
+      with_items: "{{ ansible_roles_path | fileglob }}" 
 
