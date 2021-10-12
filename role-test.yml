@@ -5,7 +5,7 @@
     - debug:
         msg: "{{ ansible_roles_path }}"
     - debug:
-        msg: "{{ lookup('fileglob', ansible_roles_path }}"
+        msg: "{{ lookup('fileglob', ansible_roles_path) }}"
     - include_role:
         name: "{{ item }}/certs/generate-csr"
       with_items: "{{ ansible_roles_path | fileglob }}" 
