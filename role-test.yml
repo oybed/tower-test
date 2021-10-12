@@ -6,5 +6,5 @@
   tasks:
     - include_role:
         name: "{{ item[:-(file_lookup|length)] }}"
-      with_items: "{{ (ansible_roles_path + '/generate-csr/' + file_lookup) | fileglob }}" 
+      with_items: "{{ (ansible_roles_path + '/certs/generate-csr/' + file_lookup) | fileglob }}" 
 
