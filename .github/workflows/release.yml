@@ -18,7 +18,7 @@ jobs:
     steps:
     - name: Print release
       run: |
-        echo ::set-output name=text::$(echo ${{ MainVersion }} and ${{ PatchReleaseVersion }})
+        echo This is the release: ${ MainVersion } and ${ PatchReleaseVersion }
   build:
     runs-on: ubuntu-latest
     steps:
