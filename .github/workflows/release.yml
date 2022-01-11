@@ -7,6 +7,10 @@ on:
     types: 
       - created
 jobs:
+  prep-env:
+    env:
+      MainVersion: ${{ github.event.client_payload.slash_command.main }}
+      PatchReleaseVersion: ${{ github.event.client_payload.slash_command.patch-release }}
   build:
     runs-on: ubuntu-latest
     steps:
