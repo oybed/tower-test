@@ -13,8 +13,8 @@ jobs:
   prep-env:
     runs-on: ubuntu-latest
     env:
-      MainVersion: ${{ github.event.client_payload.slash_command.main }}
-      PatchReleaseVersion: ${{ github.event.client_payload.slash_command.patch-release }}
+      MainVersion: ${{ github.event.client_payload.slash_command.args.named.main }}
+      PatchReleaseVersion: ${{ github.event.client_payload.slash_command.args.named.patch-release }}
     steps:
     - name: Print release
       run: |
