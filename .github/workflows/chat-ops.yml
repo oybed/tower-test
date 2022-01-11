@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Command Dispatch
-      uses: peter-evans/slash-command-dispatch@v2.3.0
+      uses: peter-evans/slash-command-dispatch@v2
       with:
         token: ${{ secrets.ACTION_TOKEN }}
         commands: release
