@@ -3,9 +3,12 @@
 name: Create Release
 
 on:
-  release:
-    types: 
-      - created
+  repository_dispatch:
+    types: [release-command]
+# release:
+#   types: 
+#     - created
+      
 jobs:
   prep-env:
     env:
