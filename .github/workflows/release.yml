@@ -11,6 +11,7 @@ on:
       
 jobs:
   prep-env:
+    runs-on: ubuntu-latest
     env:
       MainVersion: ${{ github.event.client_payload.slash_command.main }}
       PatchReleaseVersion: ${{ github.event.client_payload.slash_command.patch-release }}
