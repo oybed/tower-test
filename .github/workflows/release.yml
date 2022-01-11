@@ -18,7 +18,8 @@ jobs:
       PatchReleaseVersion: ${{ github.event.client_payload.slash_command.patch-release }}
     steps:
     - name: Print release
-      run: echo "This is the release: $MainVersion and $PatchReleaseVersion"
+      run: |
+        echo "This is the release: $MainVersion and $PatchReleaseVersion"
   build:
     runs-on: ubuntu-latest
     steps:
