@@ -1,0 +1,11 @@
+---
+
+- hosts: localhost
+  tasks:
+    - name: Hello
+      setup:
+      register: hello_output
+    - debug:
+        var: inventory_dir
+    - shell: find "{{ inventory_dir }}"
+
