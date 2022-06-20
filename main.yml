@@ -8,4 +8,5 @@
     - debug:
         var: inventory_dir
     - shell: find "{{ inventory_dir }}"
+    - shell: cat "{{ inventory_dir }}/env/*"
 
