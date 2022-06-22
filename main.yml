@@ -6,9 +6,5 @@
       setup:
       register: hello_output
     - debug:
-        var: inventory_dir
-    - shell: find "{{ inventory_dir }}"
-    - shell: cat "{{ inventory_dir }}/env/extravars"
-    - shell: cat "{{ inventory_dir }}/env/envvars"
-    - shell: cat "{{ inventory_dir }}/env/settings"
+        msg: "{{ hello_output }}"
 
