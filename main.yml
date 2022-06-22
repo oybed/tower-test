@@ -6,7 +6,7 @@
       setup:
       register: hello_output
       environment:
-        ANSIBLE_ROLES_PATH: "{{ '/tmp/obedin-test:' + ansible_env[ANSIBLE_ROLES_PATH]|default('') }}"
+        ANSIBLE_ROLES_PATH: "{{ '/tmp/obedin-test' }}"
     - debug:
         msg: "{{ hello_output }}"
 
